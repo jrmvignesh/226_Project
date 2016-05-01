@@ -18,20 +18,23 @@
     $conn=new mysqli($servername,$username,$pass,$dbname);
     $user=$_POST["name"];
     $password=$_POST["passwd"];
+
     $sql="insert into Admin VALUES ('$user','$password')";
+
+    $stmt=$conn->prepare($sql);
     if($conn->connect_error)
     {
         die("Connection failed: ".$conn->connect_error);
     }
 else
 {
-    if($conn->query($sql) ===TRUE)
+    if($conn->query($sql)===TRUE)
     {
         echo "Inserted successfully";
     }
     else
     {
-        echo "Try again";
+        echo "Try again with another username";
     }
 }
     $conn->close();

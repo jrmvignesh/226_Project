@@ -6,9 +6,27 @@ Artist/Admin
     <form method="post" action="login_check.php">
 User Name: <input type="text" id="name" name="name"/><br>
     Password:<input type="password" id="passwd" name="passwd"/><br>
-    <input type="submit" value="Submit"/>  <input type="button" value="Register" onclick="location='register_artist.html'"/>
+    <input type="submit" value="Submit"/>  <input type="button" value="Register" onclick="location='register_art_dealer.html'"/>
+
+
 </form>
 </div>
+
+
+<br><br>
+
+<div id="customer">
+    Customer
+    <form method="post" action="customer_login_check.php">
+        User Name: <input type="text" id="cname" name="name"/><br>
+        Password:<input type="password" id="cpasswd" name="passwd"/><br>
+        <input type="submit" value="Submit"/>  <input type="button" value="Register" onclick="location='register_customer.html'"/>
+
+
+    </form>
+</div>
+
+
 <?php
 /**
  * Created by PhpStorm.
