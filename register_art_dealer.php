@@ -31,6 +31,7 @@ else
     if($conn->query($sql)===TRUE)
     {
         echo "Inserted successfully";
+        header("Location: https://localhost/226_Project/login.php");
     }
     else
     {

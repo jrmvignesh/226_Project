@@ -18,8 +18,8 @@ User Name: <input type="text" id="name" name="name"/><br>
 <div id="customer">
     Customer
     <form method="post" action="customer_login_check.php">
-        User Name: <input type="text" id="cname" name="name"/><br>
-        Password:<input type="password" id="cpasswd" name="passwd"/><br>
+        User Name: <input type="text" id="cname" name="cname"/><br>
+        Password:<input type="password" id="cpasswd" name="cpasswd"/><br>
         <input type="submit" value="Submit"/>  <input type="button" value="Register" onclick="location='register_customer.html'"/>
 
 

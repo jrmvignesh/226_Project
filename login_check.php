@@ -22,16 +22,16 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
 if($conn->connect_error)
 {
     die("Connection failed: ".$conn->connect_error);
-    echo "Authenticated Mr/Ms A";
+
 }
 else
 {
-    echo "Authenticated Mr/Ms B";
+
     $result=$conn->query("select * from `Art Dealer` where Username = '$name'");
     $result1=$conn->query("select * from `Admin` where Username = '$name'");
     if($result->num_rows>0)
     {
-        echo "Authenticated Mr/Ms B";
+
         while ($row = $result->fetch_assoc())
         {
             if($name==$row["Username"] && $password==$row["Password"])

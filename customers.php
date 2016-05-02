@@ -37,7 +37,7 @@ else
         while ($row = $result->fetch_assoc())
         {
             $t=$row["Username"];
-           echo "<a href='customer.php?UName=$t'>".$row["Username"]."</a><br>";
+            echo "<a href='customer.php?UName=$t'>".$row["Username"]."</a><br>";
         }
     }
 }
