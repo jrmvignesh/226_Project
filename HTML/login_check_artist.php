@@ -1,5 +1,5 @@
 <html>
-<head><title>login_check</title></head>
+<head><title>Art Dealer Login Check</title></head>
 <body bgcolor="#00bfff">
 <?php
 /**
@@ -10,8 +10,8 @@
  */
 session_start();
 
-$name=$_POST["name"];
-$password=$_POST["passwd"];
+$name=$_POST["email"];
+$password=$_POST["pwd"];
 
 $servername="localhost";
 $username="root";
@@ -26,8 +26,9 @@ if($conn->connect_error)
 }
 else
 {
-    $result=$conn->query("select * from `Art Dealer` where Username = '$name'");
-    $result1=$conn->query("select * from `Admin` where Username = '$name'");
+    $result=$conn->query("select * from `Customer` where Username = '$name'");
+    $result1=$conn->query("select * from `Artist` where Username = '$name'");
+
     if($result->num_rows>0)
     {
 
@@ -37,12 +38,13 @@ else
             {
                 echo "Authenticated Mr/Ms ";
                 echo $row["Username"];
-                $_SESSION["DealerName"]=$row["Username"];
-                header("Location: http://localhost/226_Project/art_dealer.php");
+                $_SESSION["Customer"]=$row["Username"];
+                header("Location: http://localhost/226_Project/HTML/Customer_Home.php");
             }
             else
             {
                 echo "Invalid password";
+                header("Location: http://localhost/226_Project/HTML/Welcome.html");
             }
 
             break;
@@ -57,12 +59,13 @@ else
             {
                 echo "Authenticated Mr/Ms ";
                 echo $row["Username"];
-                $_SESSION["DealerName"]=$row["Username"];
-                header("Location: http://localhost/226_Project/art_dealer.php");
+                $_SESSION["Artist"]=$row["Username"];
+                header("Location: http://localhost/226_Project/HTML/Artist_Home.php");
             }
             else
             {
                 echo "Invalid password";
+                header("Location: http://localhost/226_Project/HTML/Welcome.html");
             }
 
             break;
@@ -73,6 +76,7 @@ else
         echo "No such record exists";
     }
 }
+
 
 ?>
 </body>

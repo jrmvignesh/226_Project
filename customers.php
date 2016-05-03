@@ -21,7 +21,7 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
 
 
 echo "Customers"."<br>";
-echo "Hello ".$_SESSION["Name"]."<br>";
+echo "Hello ".$_SESSION["DealerName"]."<br>";
 
 
 if($conn->connect_error)

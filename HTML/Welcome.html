@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Art Gallery</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/Welcome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div>
+    <div class="jumbotron">
+        <div class="container">
+    <h1 class="text-center">The Art Gallery</h1>
+        </div>
+        </div>
+    <div class="container">
+        <div class = "row">
+            <div class="col-sm-6">
+          <div>
+          <h2 class="text-center">User/Artist Login </h2>
+          </div>
+        <form role="form" method="post" action="login_check_artist.php">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" required id="email" placeholder="Enter email" name="email">
+                <small class="text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" required id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+            <input type="submit" class="btn btn-success" value="Submit"/>
+        </form>
+    <h4 class="text-center">New User Register Here</h4>
+    <ul class="nav nav-pills nav-justified">
+        <li><a href="User_Registration.html">User Registration</a></li>
+        <li><a href="Artist_Registration.html">Artist Registration</a></li>
+    </ul>
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <h2 class="text-center">Admin/Dealer Login</h2>
+                </div>
+                <form role="form" method="post" action="login_check_dealer.php">
+                    <div class="form-group">
+                        <label for="email1">Email:</label>
+                        <input type="email" class="form-control" required id="email1" placeholder="Enter email" name="email1">
+                        <small class="text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd1">Password:</label>
+                        <input type="password" class="form-control" required id="pwd1" placeholder="Enter password" name="pwd1">
+                    </div>
+                    <input type="submit" class="btn btn-success" value="Submit"/>
+
+                </form>
+            </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Art Gallery</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div>
+
+    <div>
+        <h2 class="text-center">Artist Registration</h2>
+    </div>
+    <div class = "container">
+    <form role="form" method="post" action="Artist_Registration.php">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" required id="email" placeholder="Enter email" name="email">
+            <small class="text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" required id="pwd" placeholder="Enter password" name="pwd">
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" required id="name" placeholder="Enter name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="sex">Sex:</label>
+            <input type="text" class="form-control" required id="sex" placeholder="Enter sex" name="sex">
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" required id="age" placeholder="Enter age" name="age">
+        </div>
+        <div class="form-group">
+           <!---- <label for="style">Style:</label>
+            <input type="text" class="form-control" id="style" placeholder="Enter style">--->
+            <label for="style">Style:</label>
+            <select name="style" class="form-control" id="style" required>
+                <option>Abstract Art</option>
+                <option>Surrealism</option>
+                <option>Conceptual Art</option>
+                <option>Pop Art</option>
+                <option>Hyperrealism</option>
+                <option>Minimalism</option>
+                <option>Futurism</option>
+                <option>Impressionism</option>
+                <option>Fauvism</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="style">Nationality:</label>
+            <input type="text" class="form-control" required id="nationality" placeholder="Enter nationality" name="nationality">
+        </div>
+        <input type="submit" class="btn btn-success" value="Submit"/>
+    </form>
+    </div>
+</div>
+</body>
+</html>
