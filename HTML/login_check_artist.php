@@ -39,12 +39,12 @@ else
                 echo "Authenticated Mr/Ms ";
                 echo $row["Username"];
                 $_SESSION["Customer"]=$row["Username"];
-                header("Location: http://localhost/226_Project/HTML/Customer_Home.php");
+               header("Location: http://localhost/226_Project/HTML/Customer_Home.php");
             }
             else
             {
                 echo "Invalid password";
-                header("Location: http://localhost/226_Project/HTML/Welcome.html");
+      /*          header("Location: http://localhost/226_Project/HTML/Welcome.html");*/
             }
 
             break;
@@ -65,7 +65,7 @@ else
             else
             {
                 echo "Invalid password";
-                header("Location: http://localhost/226_Project/HTML/Welcome.html");
+           /*     header("Location: http://localhost/226_Project/HTML/Welcome.html");*/
             }
 
             break;

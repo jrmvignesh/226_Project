@@ -16,7 +16,7 @@ $pass="";
 $dbname="mydb";
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
-$sql="select C.Username,C.Taste from Customer C inner join Events E on C.Taste=E.Theme
+$sql="select distinct C.Username from Customer C inner join Events E on C.Taste=E.Theme
  inner join `Art Dealer` A on A.Username=E.DealerName where A.Username='$dealername'";
 
 $result=$conn->query($sql);
@@ -72,8 +72,8 @@ if($result->num_rows>0)
     {
         $_SESSION["Visit"]="Customer";
         $cus=$row["Username"];
-$t=$row["Taste"];
-        echo $cus."  ".$t."  &nbsp;&nbsp; <input type=button value=Invite onclick=\"location='invite_customer.php?CUName=$cus'\"/><br>";
+
+        echo $cus."  "."  &nbsp;&nbsp;<input type=button value=Invite onclick=\"location='invite_customer.php?CUName=$cus'\"/><br>";
     }
 }
         ?>

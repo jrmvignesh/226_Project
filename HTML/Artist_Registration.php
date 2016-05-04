@@ -22,10 +22,10 @@ $sex=$_POST["sex"];
 $password=$_POST["pwd"];
 $style=$_POST["style"];
 $nation=$_POST["nationality"];
-
+$dealer=NULL;
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
-$sql="insert into Artist VALUES ('$email','$password','$name','$sex','$age','$style','$nation')";
+$sql="insert into Artist VALUES ('$email','$password','$name','$sex','$age','$style','$nation','$dealer')";
 
 if($conn->connect_error)
 {
@@ -36,6 +36,7 @@ else
     if($conn->query($sql)===TRUE)
     {
         echo "Inserted successfully";
+        header("Location: http://localhost/226_Project/HTML/Welcome.html");
     }
     else
     {
@@ -43,7 +44,7 @@ else
     }
 }
 
-header("Location: http://localhost/226_Project/HTML/Welcome.html");
+
 $conn->close();
 
 

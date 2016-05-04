@@ -17,11 +17,12 @@ $pass="";
 $dbname="mydb";
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
-$sql="select C.Username,C.Taste from Artist C inner join Events E on C.Style=E.Theme
+$sql="select  C.Username,C.Style,E.Name from Artist C inner join Events E on C.Style=E.Theme
  inner join `Art Dealer` A on A.Username=E.DealerName where A.Username='$dealername'";
-settype($result,"object");
 
-$result=$conn->query("select C.Username,C.Taste from Artist C inner join Events E on C.Style=E.Theme");
+$sql1="select distinct A.Username from Artist A inner join Events E on A.Style=E.Theme inner join `Art Dealer` AD on AD.Username=E.DealerName where AD.Username='$dealername'";
+
+$result1=$conn->query($sql1);
 
 
 ?>
@@ -74,15 +75,17 @@ $result=$conn->query("select C.Username,C.Taste from Artist C inner join Events 
         <?php
         $result=$conn->query($sql);
         settype($result,"object");
-        if($result->num_rows()>0)
+
+        if($result1->num_rows>0)
         {
             echo "Hi";
-            while($row=$result->fetch_assoc())
+            while($row=$result1->fetch_assoc())
             {
                 $_SESSION["Visit"]="Artist";
                 $cus=$row["Username"];
-                $t=$row["Style"];
-                echo $cus."  ".$t."  &nbsp;&nbsp; <input type=button value=Invite onclick=\"location='invite_customer.php?CUName=$cus'\"/><br>";
+
+
+                echo $cus."&nbsp;&nbsp;&nbsp;"."&nbsp;&nbsp;&nbsp;"."  &nbsp;&nbsp; <input type=button value=Invite onclick=\"location='invite_customer.php?CUName=$cus'\"/><br>";
             }
         }
         ?>

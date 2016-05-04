@@ -2,17 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd512781-78fd-4c75-b003-c34d24b0a314" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/Artist_Registration.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/User_Registration.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/add_employee.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/add_event.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/invite_customer.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/login_check.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/login_check_artist.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/login_check_dealer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/register_event.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML/register_event_artist.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchase_painting.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sell_painting.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/Artdealer_Invite_Artist.php" afterPath="$PROJECT_DIR$/HTML/Artdealer_Invite_Artist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/Artdealer_Invite_Customer.php" afterPath="$PROJECT_DIR$/HTML/Artdealer_Invite_Customer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/Artist_Home.php" afterPath="$PROJECT_DIR$/HTML/Artist_Home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/Artist_Registration.php" afterPath="$PROJECT_DIR$/HTML/Artist_Registration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/Customer_Home.php" afterPath="$PROJECT_DIR$/HTML/Customer_Home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/User_Registration.php" afterPath="$PROJECT_DIR$/HTML/User_Registration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/login_check_artist.php" afterPath="$PROJECT_DIR$/HTML/login_check_artist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML/login_check_dealer.php" afterPath="$PROJECT_DIR$/HTML/login_check_dealer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art_dealer.php" afterPath="$PROJECT_DIR$/art_dealer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customers.php" afterPath="$PROJECT_DIR$/customers.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login_check.php" afterPath="$PROJECT_DIR$/login_check.php" />
@@ -39,64 +45,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Artdealer_Invite_Customer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Invite_Customer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-42.5">
-              <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-              <folding>
-                <marker date="1462277889000" expanded="true" signature="294:459" placeholder="select C.Use..Customer..." />
-                <marker date="1462277889000" expanded="true" signature="499:527" placeholder="..." />
-                <marker date="1462277889000" expanded="true" signature="539:558" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Artdealer_Invite_Artist.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Invite_Artist.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34900543">
-              <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
-              <folding>
-                <marker date="1462279164000" expanded="true" signature="295:458" placeholder="select C.Use..Artist..." />
-                <marker date="1462279164000" expanded="true" signature="511:589" placeholder="select C.Use..Artist..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Register_Event.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Register_Event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.5">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="60" />
-              <folding>
-                <marker date="1462162112000" expanded="true" signature="439:491" placeholder="insert into Customer_Events..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Customer_Home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HTML/Customer_Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-              <folding />
+            <state vertical-scroll-proportion="-13.041667">
+              <caret line="32" column="212" selection-start-line="32" selection-start-column="212" selection-end-line="32" selection-end-column="212" />
+              <folding>
+                <marker date="1462336758000" expanded="true" signature="682:740" placeholder="select Deale..Customer..." />
+                <marker date="1462336758000" expanded="true" signature="920:1110" placeholder="select disti..Events..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login_check.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HTML/login_check.php">
+      <file leaf-file-name="register_event.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/register_event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.916667">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
+            <state vertical-scroll-proportion="-20.541666">
+              <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+              <folding>
+                <marker date="1462332806000" expanded="true" signature="338:390" placeholder="insert into register_events..." />
+                <marker date="1462332806000" expanded="true" signature="400:450" placeholder="delete from ..." />
+                <marker date="1462332806000" expanded="true" signature="400:472" placeholder="delete from ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_check_dealer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/login_check_dealer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.7916665">
+              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
               <folding>
                 <element signature="e#89#169#0#PHP" expanded="false" />
-                <marker date="1462267179000" expanded="true" signature="531:582" placeholder="select * fro..Art Dealer..." />
-                <marker date="1462267179000" expanded="true" signature="613:659" placeholder="select * fro..Admin..." />
+                <marker date="1462332823000" expanded="true" signature="480:531" placeholder="select * fro..Art Dealer..." />
+                <marker date="1462332823000" expanded="true" signature="562:608" placeholder="select * fro..Admin..." />
               </folding>
             </state>
           </provider>
@@ -105,31 +89,63 @@
       <file leaf-file-name="Artist_Home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HTML/Artist_Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Artdealer_Employee.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Employee.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875">
-              <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+            <state vertical-scroll-proportion="-1.1764706">
+              <caret line="35" column="216" selection-start-line="35" selection-start-column="216" selection-end-line="35" selection-end-column="216" />
               <folding>
-                <marker date="1462277050000" expanded="true" signature="2427:2475" placeholder="select * fro..Employee..." />
+                <marker date="1462336808000" expanded="true" signature="732:786" placeholder="select Deale..Customer..." />
+                <marker date="1462336808000" expanded="true" signature="993:1183" placeholder="select disti..Events..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Welcome.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HTML/Welcome.html">
+      <file leaf-file-name="Artist_Sell_Painting.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HTML/Artist_Sell_Painting.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.291667">
-              <caret line="55" column="64" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register_event_artist.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/register_event_artist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.541667">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+              <folding>
+                <marker date="1462332783000" expanded="true" signature="254:313" placeholder="insert into register_events_artist..." />
+                <marker date="1462332783000" expanded="true" signature="323:402" placeholder="delete from ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Artdealer_Invite_Artist.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Invite_Artist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.166667">
+              <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+              <folding>
+                <marker date="1462334597000" expanded="true" signature="295:466" placeholder="select C.Use..Artist..." />
+                <marker date="1462334597000" expanded="true" signature="477:556" placeholder="select * fro..Artist..." />
+                <marker date="1462334597000" expanded="true" signature="477:643" placeholder="select * fro..Artist..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Artdealer_Invite_Customer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Invite_Customer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.666667">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding>
+                <marker date="1462336466000" expanded="true" signature="294:460" placeholder="select C.Use..Customer..." />
+                <marker date="1462336466000" expanded="true" signature="500:528" placeholder="..." />
+                <marker date="1462336466000" expanded="true" signature="540:559" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,10 +153,24 @@
       <file leaf-file-name="Artdealer_Home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.625">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="31" selection-end-column="73" />
+            <state vertical-scroll-proportion="-16.791666">
+              <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
               <folding>
                 <marker date="1462277050000" expanded="true" signature="751:798" placeholder="select * fro..Events..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="invite_customer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/invite_customer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.166666">
+              <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
+              <folding>
+                <marker date="1462278301000" expanded="true" signature="296:340" placeholder="update Custo..." />
+                <marker date="1462278301000" expanded="true" signature="296:364" placeholder="update Custo..." />
+                <marker date="1462278301000" expanded="true" signature="374:440" placeholder="update Artis..." />
               </folding>
             </state>
           </provider>
@@ -188,22 +218,25 @@
         <option value="$PROJECT_DIR$/painting.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/HTML/User_Registration.html" />
-        <option value="$PROJECT_DIR$/HTML/User_Registration.php" />
         <option value="$PROJECT_DIR$/HTML/Artist_Registration.html" />
-        <option value="$PROJECT_DIR$/HTML/Artist_Registration.php" />
         <option value="$PROJECT_DIR$/HTML/login_check.php" />
         <option value="$PROJECT_DIR$/HTML/Welcome.html" />
-        <option value="$PROJECT_DIR$/HTML/login_check_dealer.php" />
         <option value="$PROJECT_DIR$/HTML/add_event.php" />
         <option value="$PROJECT_DIR$/HTML/Artdealer_Home.php" />
         <option value="$PROJECT_DIR$/HTML/Artdealer_Employee.html" />
         <option value="$PROJECT_DIR$/HTML/Artdealer_Employee.php" />
         <option value="$PROJECT_DIR$/HTML/add_employee.php" />
-        <option value="$PROJECT_DIR$/HTML/login_check_artist.php" />
-        <option value="$PROJECT_DIR$/HTML/Customer_Home.php" />
-        <option value="$PROJECT_DIR$/HTML/Artdealer_Invite_Customer.php" />
         <option value="$PROJECT_DIR$/HTML/invite_customer.php" />
+        <option value="$PROJECT_DIR$/HTML/login_check_artist.php" />
+        <option value="$PROJECT_DIR$/HTML/Artist_Registration.php" />
+        <option value="$PROJECT_DIR$/HTML/User_Registration.php" />
+        <option value="$PROJECT_DIR$/HTML/register_event_artist.php" />
+        <option value="$PROJECT_DIR$/HTML/register_event.php" />
+        <option value="$PROJECT_DIR$/HTML/login_check_dealer.php" />
         <option value="$PROJECT_DIR$/HTML/Artdealer_Invite_Artist.php" />
+        <option value="$PROJECT_DIR$/HTML/Artdealer_Invite_Customer.php" />
+        <option value="$PROJECT_DIR$/HTML/Customer_Home.php" />
+        <option value="$PROJECT_DIR$/HTML/Artist_Home.php" />
       </list>
     </option>
   </component>
@@ -403,35 +436,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/customer_login_check.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding>
-            <marker date="1462152701000" expanded="true" signature="464:510" placeholder="select * fro..Customer..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register_customer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Invite_Customer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-          <folding>
-            <marker date="1462097035000" expanded="true" signature="410:468" placeholder="Update Custo..." />
-            <marker date="1462097035000" expanded="true" signature="416:426" placeholder="insert into Admin..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/insert_customer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -708,14 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/Artist_Registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.4583335">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login_check.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.125">
@@ -728,41 +724,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/User_Registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.541666">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/Artist_Registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4166667">
-          <caret line="27" column="74" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
-          <folding>
-            <element signature="e#78#157#0#PHP" expanded="true" />
-            <marker date="1462266119000" expanded="true" signature="459:548" placeholder="insert into Artist..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HTML/Customer_Buy_Painting.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.375">
           <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/User_Registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="49" selection-end-column="2" />
-          <folding>
-            <element signature="e#78#157#0#PHP" expanded="true" />
-            <marker date="1462265042000" expanded="true" signature="428:509" placeholder="insert into Customer..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,52 +763,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/login_check_dealer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-35.625">
-          <caret line="62" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="e#89#169#0#PHP" expanded="false" />
-            <marker date="1462268920000" expanded="true" signature="480:531" placeholder="select * fro..Art Dealer..." />
-            <marker date="1462268920000" expanded="true" signature="562:608" placeholder="select * fro..Admin..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/login_check_artist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
-          <caret line="41" column="81" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
-          <folding>
-            <element signature="e#89#169#0#PHP" expanded="false" />
-            <marker date="1462273779000" expanded="true" signature="478:527" placeholder="select * fro..Customer..." />
-            <marker date="1462273779000" expanded="true" signature="558:605" placeholder="select * fro..Artist..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5280289">
           <caret line="22" column="130" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="31" selection-end-column="73" />
-          <folding>
-            <marker date="1462277050000" expanded="true" signature="751:798" placeholder="select * fro..Events..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/Customer_Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -854,14 +778,6 @@
           <folding>
             <marker date="1462162112000" expanded="true" signature="439:491" placeholder="insert into Customer_Events..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/Artist_Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,9 +811,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/Artist_Registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/User_Registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.791666">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/User_Registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0416667">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="e#78#157#0#PHP" expanded="true" />
+            <marker date="1462326892000" expanded="true" signature="465:555" placeholder="insert into customer..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/Artist_Registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1666665">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#78#157#0#PHP" expanded="true" />
+            <marker date="1462326099000" expanded="true" signature="472:560" placeholder="insert into Artist..." />
+            <marker date="1462326099000" expanded="true" signature="472:571" placeholder="insert into Artist..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/login_check_artist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+          <folding>
+            <element signature="e#89#169#0#PHP" expanded="false" />
+            <marker date="1462314872000" expanded="true" signature="478:527" placeholder="select * fro..Customer..." />
+            <marker date="1462314872000" expanded="true" signature="558:605" placeholder="select * fro..Artist..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/register_event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.541666">
+          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+          <folding>
+            <marker date="1462332806000" expanded="true" signature="338:390" placeholder="insert into register_events..." />
+            <marker date="1462332806000" expanded="true" signature="400:450" placeholder="delete from ..." />
+            <marker date="1462332806000" expanded="true" signature="400:472" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.791666">
+          <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
+          <folding>
+            <marker date="1462277050000" expanded="true" signature="751:798" placeholder="select * fro..Events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HTML/invite_customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8643761">
+        <state vertical-scroll-proportion="-16.166666">
           <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
           <folding>
             <marker date="1462278301000" expanded="true" signature="296:340" placeholder="update Custo..." />
@@ -907,26 +896,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Invite_Customer.php">
+    <entry file="file://$PROJECT_DIR$/HTML/login_check_dealer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-42.5">
-          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        <state vertical-scroll-proportion="-6.7916665">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding>
-            <marker date="1462277889000" expanded="true" signature="294:459" placeholder="select C.Use..Customer..." />
-            <marker date="1462277889000" expanded="true" signature="499:527" placeholder="..." />
-            <marker date="1462277889000" expanded="true" signature="539:558" placeholder="..." />
+            <element signature="e#89#169#0#PHP" expanded="false" />
+            <marker date="1462332823000" expanded="true" signature="480:531" placeholder="select * fro..Art Dealer..." />
+            <marker date="1462332823000" expanded="true" signature="562:608" placeholder="select * fro..Admin..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/register_event_artist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.541667">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <marker date="1462332783000" expanded="true" signature="254:313" placeholder="insert into register_events_artist..." />
+            <marker date="1462332783000" expanded="true" signature="323:402" placeholder="delete from ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Invite_Artist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34900543">
-          <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+        <state vertical-scroll-proportion="-11.166667">
+          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
           <folding>
-            <marker date="1462279164000" expanded="true" signature="295:458" placeholder="select C.Use..Artist..." />
-            <marker date="1462279164000" expanded="true" signature="511:589" placeholder="select C.Use..Artist..." />
+            <marker date="1462334597000" expanded="true" signature="295:466" placeholder="select C.Use..Artist..." />
+            <marker date="1462334597000" expanded="true" signature="477:556" placeholder="select * fro..Artist..." />
+            <marker date="1462334597000" expanded="true" signature="477:643" placeholder="select * fro..Artist..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/Artdealer_Invite_Customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.666667">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <marker date="1462336466000" expanded="true" signature="294:460" placeholder="select C.Use..Customer..." />
+            <marker date="1462336466000" expanded="true" signature="500:528" placeholder="..." />
+            <marker date="1462336466000" expanded="true" signature="540:559" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/Customer_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.041667">
+          <caret line="32" column="212" selection-start-line="32" selection-start-column="212" selection-end-line="32" selection-end-column="212" />
+          <folding>
+            <marker date="1462336758000" expanded="true" signature="682:740" placeholder="select Deale..Customer..." />
+            <marker date="1462336758000" expanded="true" signature="920:1110" placeholder="select disti..Events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/Artist_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1764706">
+          <caret line="35" column="216" selection-start-line="35" selection-start-column="216" selection-end-line="35" selection-end-column="216" />
+          <folding>
+            <marker date="1462336808000" expanded="true" signature="732:786" placeholder="select Deale..Customer..." />
+            <marker date="1462336808000" expanded="true" signature="993:1183" placeholder="select disti..Events..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/Artist_Sell_Painting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -67,7 +67,6 @@ else
                 echo "Invalid password";
                 header("Location: http://localhost/226_Project/HTML/Welcome.html");
             }
-
             break;
         }
     }

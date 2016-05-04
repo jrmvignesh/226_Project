@@ -21,10 +21,12 @@ $age=$_POST["age"];
 $sex=$_POST["sex"];
 $password=$_POST["pwd"];
 $taste=$_POST["taste"];
-
+$dealer="None";
 $conn=new mysqli($servername,$username,$pass,$dbname);
+$nation="";
+$sqld="";
 
-$sql="insert into Customer VALUES ('$email','$name','$age','$sex','$taste','$password')";
+$sql="insert into customer values('$email','$name','$age','$sex','$taste','$password','$dealer')";
 
 if($conn->connect_error)
 {
@@ -35,6 +37,7 @@ else
     if($conn->query($sql)===TRUE)
     {
         echo "Inserted successfully";
+        header("Location: http://localhost/226_Project/HTML/Welcome.html");
     }
     else
     {
@@ -42,7 +45,7 @@ else
     }
 }
 
-header("Location: http://localhost/226_Project/HTML/Welcome.html");
+
 $conn->close();
 
 

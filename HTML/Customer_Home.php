@@ -13,6 +13,25 @@
 <?php
 session_start();
 $customer=$_SESSION["Customer"];
+
+$servername="localhost";
+$username="root";
+$pass="";
+$dbname="mydb";
+$conn=new mysqli($servername,$username,$pass,$dbname);
+
+$result=$conn->query("select DealerName from Customer where Username='$customer'");
+
+if($result->num_rows>0) {
+    while ($row=$result->fetch_assoc()) {
+$dealer=$row["DealerName"];
+        break;
+    }
+}
+$result1=NULL;
+if($dealer!=NULL)
+$result1=$conn->query("select distinct E.Event_ID from Events E inner join Customer C on E.Theme=C.Taste inner join `Art Dealer` A on A.Username=C.DealerName where C.DealerName='$dealer' and C.Username='$customer'");
+
 ?>
 <body>
 <div>
@@ -42,6 +61,22 @@ $customer=$_SESSION["Customer"];
     <div>
         This will describe all the events customer is attending and for which he has been invited. He can click on the event and register
         for it.
+
+
+
+        <?php
+        if($result1!=NULL && $result1->num_rows>0)
+        {
+            echo "<br><br>Event Invites<br>";
+            echo "<ol>";
+            while ($row = $result1->fetch_assoc())
+            {
+                $evid=$row["Event_ID"];
+                echo "<li>".$evid."&nbsp;&nbsp;&nbsp;"."&nbsp;&nbsp;&nbsp;<input type=button value=Register onclick=\"location = 'register_event.php?CUName=$customer&EVID=$evid'\"/> <br>";
+            }
+            echo "</ol>";
+        }
+        ?>
     </div>
     </div>
 </body>

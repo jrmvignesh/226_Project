@@ -9,6 +9,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+
+
+<?php
+session_start();
+$artist=$_SESSION["Artist"];
+
+$servername="localhost";
+$username="root";
+$pass="";
+$dbname="mydb";
+$conn=new mysqli($servername,$username,$pass,$dbname);
+
+$result=$conn->query("select DealerName from Artist where Username='$artist'");
+
+$dealer=NULL;
+
+if($result->num_rows>0) {
+    while ($row=$result->fetch_assoc()) {
+        $dealer=$row["DealerName"];
+        break;
+    }
+}
+$result1=NULL;
+if($dealer!=NULL)
+    $result1=$conn->query("select distinct E.Event_ID from Events E inner join Artist AR on E.Theme=AR.Style inner join `Art Dealer` A on A.Username=AR.DealerName where AR.DealerName='$dealer' and A.UserName='$artist'");
+
+?>
+
+
+
 <body>
 <div>
     <nav class="navbar navbar-default">
@@ -35,6 +65,23 @@
 <div>
     This will describe all the events he is attending and for which he has been invited. He can click on the event and register
     for it.
+
+
+    <?php
+    if($result1!=NULL && $result1->num_rows>0)
+    {
+        echo "<br><br>Event Invites<br>";
+        echo "<ol>";
+        while ($row = $result1->fetch_assoc())
+        {
+            $evid=$row["Event_ID"];
+            echo "<li>".$evid."&nbsp;"."&nbsp;&nbsp;&nbsp;<input type=button value=Register onclick=\"location = 'register_event_artist.php?AName=$artist&EVID=$evid'\"/> <br>";
+        }
+        echo "</ol>";
+    }
+    ?>
+
+
     </div>
 </body>
 </html>
