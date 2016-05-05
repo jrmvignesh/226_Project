@@ -28,6 +28,7 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
 //Encrypting password
 $pass=md5($password);
 
+//Artist registration query
 $sql="insert into Artist VALUES ('$email','$pass','$name','$sex','$age','$style','$nation','$dealer')";
 
 if($conn->connect_error)
@@ -38,6 +39,7 @@ else
 {
     if($conn->query($sql)===TRUE)
     {
+
         echo "Inserted successfully";
         $file=fopen('log','a');
         $date=date_create();

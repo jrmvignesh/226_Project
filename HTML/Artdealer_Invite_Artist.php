@@ -20,6 +20,7 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
 $sql="select  C.Username,C.Style,E.Name from Artist C inner join Events E on C.Style=E.Theme
  inner join `Art Dealer` A on A.Username=E.DealerName where A.Username='$dealername'";
 
+//using View to select artists who have matching style and having a dealer from whom invite has arrived
 $sql1="create or replace view artistinvites as (select distinct A.Username from Artist A
 inner join Events E on A.Style=E.Theme
 inner join `Art Dealer` AD on AD.Username=E.DealerName where AD.Username='$dealername')";
@@ -76,12 +77,11 @@ $result1=$conn->query("select * from artistinvites");
     <div>
         This will describe all the artis whom can be invited to the event. We can give a invite button and event id dropdown<br><br>
         <?php
-     //   $result=$conn->query($sql);
-       // settype($result,"object");
+
         $_SESSION["Visit"]="Artist";
         if($result1!=NULL && $result1->num_rows>0)
         {
-         //   echo "Hi";
+
             while($row=$result1->fetch_assoc())
             {
                 $_SESSION["Visit"]="Artist";

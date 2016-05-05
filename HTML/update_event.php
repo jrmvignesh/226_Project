@@ -15,6 +15,7 @@ $eventid=$_POST['eventid'];
 $location=$_POST['location'];
 $date=$_POST["date"];
 
+//Updating events by art dealer
 $sql="update events set Location='$location',Date='$date' where Event_ID='$eventid'";
 
 if($conn->connect_error)

@@ -19,6 +19,7 @@ $id=$_POST["painting_id"];
 $price=$_POST["sold_price"];
 $customer=$_POST["customer_username"];
 
+//update paintings
 $res=$conn->query("select * from paintings where painting_id='$id'");
 
 $CUS=NULL;
@@ -39,12 +40,15 @@ if($res->num_rows>0)
 
 
 if($CUS==NULL) {
+
+    //Selling painting put up for auction by Artist
     if ($conn->query("update Paintings set CustomerUsername_Purchase='$customer',ArtistUsername=NULL,CustomerUsername_Sell=NULL,Last_Sold_Price='$price',Artist_Sold_Price='$price' where Painting_ID='$id'") === TRUE) {
         echo "Sale complete";
     }
 }
 else if($AUS==NULL)
 {
+    //Selling painting put up for auction by Customer
     if ($conn->query("update Paintings set CustomerUsername_Purchase='$customer',ArtistUsername=NULL,CustomerUsername_Sell=NULL,Last_Sold_Price='$price',Customer_Sold_Price='$price' where Painting_ID='$id'") === TRUE) {
         echo "Sale complete";
     }

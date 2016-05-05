@@ -29,11 +29,8 @@ $dealer=$row["DealerName"];
 }
 $result1=NULL;
 
-/*$sql="START TRANSACTION;
-select DealerName into @TEMP from Customer where Username='$customer' limit 1;
-select distinct E.Event_ID from Events E inner join Customer AR on E.Theme=AR.Taste inner join `Art Dealer` A on A.Username=AR.DealerName where AR.DealerName= @TEMP and AR.Username='$customer';
-END;";*/
 
+//Select those events which match the taste of the customer and those are conducted by art dealer from whom invite has come
 if($dealer!=NULL)
 $result1=$conn->query("select distinct E.Event_ID from Events E inner join Customer C on E.Theme=C.Taste inner join `Art Dealer` A on A.Username=C.DealerName where C.DealerName='$dealer' and C.Username='$customer';");
 

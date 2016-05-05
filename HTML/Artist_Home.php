@@ -31,7 +31,7 @@ if($result->num_rows>0) {
         break;
     }
 }
-
+//Select those events which match the style of the artist and those are conducted by art dealer from whom invite has come
 $result1=NULL;
 if($dealer!=NULL)
     $result1=$conn->query("select distinct E.Event_ID from Events E inner join Artist AR on E.Theme=AR.Style inner join `Art Dealer` A on A.Username=AR.DealerName where AR.DealerName='$dealer' and AR.UserName='$artist'");
