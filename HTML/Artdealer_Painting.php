@@ -1,3 +1,11 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,34 +13,26 @@
     <title>The Art Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/Welcome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 
 
-
-
-
-
-
-
-<body>
 <?php
 session_start();
 $dealer=$_SESSION["DealerName"];
-
 
 $servername="localhost";
 $username="root";
 $pass="";
 $dbname="mydb";
 $conn=new mysqli($servername,$username,$pass,$dbname);
-
-$result1=$conn->query("select * from Events where DealerName='$dealer'");
-
+$sql="select * from paintings where ((ArtistUsername is not NULL) or (CustomerUsername_Sell is not null))";
+$result1=NULL;
+$result1=$conn->query($sql);
 ?>
 
+<body>
 <div>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -40,10 +40,10 @@ $result1=$conn->query("select * from Events where DealerName='$dealer'");
                 <a class="navbar-brand" href="Artdealer_Home.php">Artdealer Home</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a href="#">Events</a>
-                </li>
                 <li class="nav-item">
+                    <a href="Artdealer_Home.html">Events</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="Artdealer_Painting.php">Update Painting</a>
                 </li>
                 <li class="nav-item">
@@ -67,57 +67,45 @@ $result1=$conn->query("select * from Events where DealerName='$dealer'");
         <div class = "row">
             <div class="col-sm-6">
                 <div>
-                    <h2 class="text-center">Events</h2>
+                    <h2 class="text-center">Paintings</h2>
                 </div>
-                This section will display all the events art dealer has created
-                and on the other section he can add new events
+                This section will display all the paintings
 
 
                 <?php
-                if($result1->num_rows>0)
+                if($result1!=NULL && $result1->num_rows>0)
                 {
-                    echo "<br><br>Events Being Conducted<br>";
+                    echo "<br><br>Paintings up for sale<br>";
+                    echo "Painting ID&nbsp;Name";
                     echo "<ol>";
+
                     while ($row = $result1->fetch_assoc())
                     {
-                        echo "<li>".$row["Name"]."<br>";
+                        $evid=$row["Painting_ID"];
+                        echo "<li>".$evid."&nbsp;".$row["Name"]."<br>";
                     }
                     echo "</ol>";
                 }
-
                 ?>
+
             </div>
             <div class="col-sm-6">
                 <div>
-                    <h2 class="text-center">Add Event</h2>
+                    <h2 class="text-center">Update Painting</h2>
                 </div>
-                <form role="form" method="post" action="add_event.php">
+                <form role="form" method="post" action="update_painting.php">
                     <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" required id="name" placeholder="Enter name" name="name">
+                        <label for="painting_id">Painting ID:</label>
+                        <input name="painting_id" type="text" class="form-control" required id="painting_id" placeholder="Enter paintingid">
                     </div>
                     <div class="form-group">
-                        <label for="location">Location:</label>
-                        <input type="text" class="form-control" required id="location" placeholder="Enter location" name="location">
+                        <label for="sold_price">Sold Price:</label>
+                        <input name="sold_price" type="text" class="form-control" required id="sold_price" placeholder="Enter soldprice">
                     </div>
                     <div class="form-group">
-                        <label for="theme">Theme:</label>
-                        <select name="theme" class="form-control" required id="theme">
-                            <option>Abstract Art</option>
-                            <option>Surrealism</option>
-                            <option>Conceptual Art</option>
-                            <option>Pop Art</option>
-                            <option>Hyperrealism</option>
-                            <option>Minimalism</option>
-                            <option>Futurism</option>
-                            <option>Impressionism</option>
-                            <option>Fauvism</option>
-                        </select>
+                        <label for="customer_username">Customer Username</label>
+                        <input name="customer_username" type="text" class="form-control" required id="customer_username" placeholder="Enter customerusername">
                     </div>
-                        <div class="form-group">
-                            <label for="date">Date:</label>
-                            <input type="date" class="form-control" required id="date" placeholder="Enter date" name="date">
-                        </div>
                     <input type="submit" class="btn btn-success" value="Submit"/>
                 </form>
             </div>

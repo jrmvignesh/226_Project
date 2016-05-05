@@ -25,7 +25,7 @@ $dname=$_SESSION["DealerName"];
                     <a href="Artdealer_Home.php">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Artdealer_Painting.html">Update Painting</a>
+                    <a class="nav-link" href="Artdealer_Painting.php">Update Painting</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="Artdealer_Employee.php">Employee</a>

@@ -20,8 +20,8 @@ $pass="";
 $dbname="mydb";
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
-$sql="select * from paintings where ((ArtistUsername is not NULL) or (CustomerUsername_Sell is not null)) and CustomerUsername_Purchase!='$customername' ";
-
+$sql="select * from paintings where ((ArtistUsername is not NULL) or (CustomerUsername_Sell is not null))";
+$s="and CustomerUsername_Purchase!='$customername'";
 $result1=$conn->query($sql);
 ?>
 
@@ -56,6 +56,7 @@ $result1=$conn->query($sql);
         This will describe all the paintings to the customer which he can buy. It can just have a buy button which he can click and buy it.
 
         <?php
+
         if($result1!=NULL && $result1->num_rows>0)
         {
             echo "<br><br>Paintings available to purchase<br>";

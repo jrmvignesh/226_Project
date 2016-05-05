@@ -13,7 +13,6 @@
 <?php
 session_start();
 $customer=$_SESSION["Customer"];
-
 $servername="localhost";
 $username="root";
 $pass="";
@@ -29,8 +28,15 @@ $dealer=$row["DealerName"];
     }
 }
 $result1=NULL;
+
+/*$sql="START TRANSACTION;
+select DealerName into @TEMP from Customer where Username='$customer' limit 1;
+select distinct E.Event_ID from Events E inner join Customer AR on E.Theme=AR.Taste inner join `Art Dealer` A on A.Username=AR.DealerName where AR.DealerName= @TEMP and AR.Username='$customer';
+END;";*/
+
 if($dealer!=NULL)
-$result1=$conn->query("select distinct E.Event_ID from Events E inner join Customer C on E.Theme=C.Taste inner join `Art Dealer` A on A.Username=C.DealerName where C.DealerName='$dealer' and C.Username='$customer'");
+$result1=$conn->query("select distinct E.Event_ID from Events E inner join Customer C on E.Theme=C.Taste inner join `Art Dealer` A on A.Username=C.DealerName where C.DealerName='$dealer' and C.Username='$customer';");
+
 
 ?>
 <body>
@@ -65,6 +71,7 @@ $result1=$conn->query("select distinct E.Event_ID from Events E inner join Custo
 
 
         <?php
+        echo "j".$customer;
         if($result1!=NULL && $result1->num_rows>0)
         {
             echo "<br><br>Event Invites<br>";

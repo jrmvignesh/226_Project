@@ -64,11 +64,12 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
                 if($result1!=NULL && $result1->num_rows>0)
                 {
                     echo "<br><br>Paintings up for sale<br>";
+                    echo "Painting ID&nbsp;Name";
                     echo "<ol>";
                     while ($row = $result1->fetch_assoc())
                     {
                         $evid=$row["Painting_ID"];
-                        echo "<li>".$evid."<br>";
+                        echo "<li>".$evid."&nbsp;".$row["Name"]."<br>";
                     }
                     echo "</ol>";
                 }
@@ -81,15 +82,15 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
                 <div>
                     <h2 class="text-center">Add Painting</h2>
                 </div>
-                <form role="form">
+                <form role="form" method="post" action="add_painting.php">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" class="form-control" required id="name" placeholder="Enter name">
+                        <input type="text" class="form-control" required id="name" placeholder="Enter name" name="name">
                     </div>
                     <div class="form-group">
                         <div class="form-group">
                             <label for="painting_type">Painting Type:</label>
-                            <select class="form-control" id="painting_type" required>
+                            <select name = "painting_type" class="form-control" id="painting_type" required>
                                 <option>Abstract Art</option>
                                 <option>Surrealism</option>
                                 <option>Conceptual Art</option>
@@ -103,15 +104,15 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
                         </div>
                         <div class="form-group">
                             <label for="ask_price">Ask Price:</label>
-                            <input type="number" class="form-control" required id="ask_price" placeholder="Enter ask price">
+                            <input type="number" name="ask_price" class="form-control" required id="ask_price" placeholder="Enter ask price">
                         </div>
                         <div class="form-group">
                             <label for="date">Date:</label>
-                            <input type="date" class="form-control" required id="date" placeholder="Enter date">
+                            <input  type="date" name="date" class="form-control" required id="date" placeholder="Enter date">
                         </div>
                         <div class="form-group">
                             <label for="painting_image">Upload Painting Image</label>
-                            <input type="file" class="form-control-file" id="painting_image">
+                            <input name="painting_image" type="file" class="form-control-file" id="painting_image">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success">Submit</button>

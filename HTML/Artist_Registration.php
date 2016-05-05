@@ -25,7 +25,9 @@ $nation=$_POST["nationality"];
 $dealer=NULL;
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
-$sql="insert into Artist VALUES ('$email','$password','$name','$sex','$age','$style','$nation','$dealer')";
+$pass=md5($password);
+
+$sql="insert into Artist VALUES ('$email','$pass','$name','$sex','$age','$style','$nation','$dealer')";
 
 if($conn->connect_error)
 {

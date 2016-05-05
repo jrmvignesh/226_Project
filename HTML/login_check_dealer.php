@@ -12,7 +12,7 @@ session_start();
 
 $name=$_POST["email1"];
 $password=$_POST["pwd1"];
-
+$passw=md5($password);
 $servername="localhost";
 $username="root";
 $pass="";
@@ -34,7 +34,7 @@ else
 
         while ($row = $result->fetch_assoc())
         {
-            if($name==$row["Username"] && $password==$row["Password"])
+            if($name==$row["Username"] && $passw==$row["Password"])
             {
                 echo "Authenticated Mr/Ms ";
                 echo $row["Username"];
@@ -60,7 +60,7 @@ else
                 echo "Authenticated Mr/Ms ";
                 echo $row["Username"];
                 $_SESSION["Admin"]=$row["Username"];
-                header("Location: http://localhost/226_Project/HTML/Artdealer_Home.php");
+                header("Location: http://localhost/226_Project/HTML/Admin_Home.php");
             }
             else
             {

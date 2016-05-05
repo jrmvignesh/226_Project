@@ -26,7 +26,9 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
 $nation="";
 $sqld="";
 
-$sql="insert into customer values('$email','$name','$age','$sex','$taste','$password','$dealer')";
+$pass=md5($password);
+
+$sql="insert into customer values('$email','$name','$age','$sex','$taste','$pass','$dealer')";
 
 if($conn->connect_error)
 {
