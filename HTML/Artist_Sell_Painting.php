@@ -9,6 +9,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+
+<?php
+session_start();
+$artist=$_SESSION["Artist"];
+
+$servername="localhost";
+$username="root";
+$pass="";
+$dbname="mydb";
+$conn=new mysqli($servername,$username,$pass,$dbname);
+
+
+
+    $result1=$conn->query("select * from paintings where ArtistUsername='$artist'");
+
+?>
+
+
+
+
 <body>
 <div>
     <nav class="navbar navbar-default">
@@ -21,7 +41,7 @@
                     <a href="Artist_Home.php">Events</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="Artist_Sell_Painting.html">Sell Painting</a>
+                    <a class="nav-link" href="Artist_Sell_Painting.php">Sell Painting</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -39,6 +59,23 @@
                 </div>
                 This section will display all the paintings that the artist has putout for sale. The other section will allow artist to
                 add new paintings
+
+                <?php
+                if($result1!=NULL && $result1->num_rows>0)
+                {
+                    echo "<br><br>Paintings up for sale<br>";
+                    echo "<ol>";
+                    while ($row = $result1->fetch_assoc())
+                    {
+                        $evid=$row["Painting_ID"];
+                        echo "<li>".$evid."<br>";
+                    }
+                    echo "</ol>";
+                }
+                ?>
+
+
+
             </div>
             <div class="col-sm-6">
                 <div>

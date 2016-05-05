@@ -9,6 +9,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+
+<?php
+session_start();
+$customer=$_SESSION["Customer"];
+
+$servername="localhost";
+$username="root";
+$pass="";
+$dbname="mydb";
+$conn=new mysqli($servername,$username,$pass,$dbname);
+
+
+    $result1=$conn->query("select * from paintings where CustomerUsername_Purchase='$customer'");
+
+?>
+
 <body>
 <div>
     <nav class="navbar navbar-default">
@@ -21,11 +37,11 @@
                     <a href="Customer_Home.php">Events</a>
                 </li >
                 <li class="nav-item">
-                    <a class="nav-link" href="Customer_Buy_Painting.html">Buy Painting</a>
+                    <a class="nav-link" href="Customer_Buy_Painting.php">Buy Painting</a>
                 </li>
                 <li class="nav-item active">
 
-                    <a class="nav-link" href="Customer_Sell_Painting.html">Sell Painting</a>
+                    <a class="nav-link" href="Customer_Sell_Painting.php">Sell Painting</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -40,6 +56,23 @@
         It can just have a sell button infront of each painting which he can click and sell it.
         There will also be a ask price text area which will update the new ask price. We have to think about the date
         whether needs to change it or not.
+
+        <?php
+        if($result1!=NULL && $result1->num_rows>0)
+        {
+            echo "<br><br>Paintings under ownership<br>";
+            echo "<ol>";
+            while ($row = $result1->fetch_assoc())
+            {
+                $evid=$row["Painting_ID"];
+                echo "<li>".$evid."&nbsp;"."&nbsp;&nbsp;&nbsp;<input type=button value=Sell onclick=\"location = 'customer_sells.php?PID=$evid'\"/> <br>";
+            }
+            echo "</ol>";
+        }
+        ?>
+
+
+
     </div>
 </div>
 </body>

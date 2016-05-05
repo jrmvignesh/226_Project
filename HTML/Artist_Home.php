@@ -51,7 +51,7 @@ if($dealer!=NULL)
                     <a href="#">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Artist_Sell_Painting.html">Sell Painting</a>
+                    <a class="nav-link" href="Artist_Sell_Painting.php">Sell Painting</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

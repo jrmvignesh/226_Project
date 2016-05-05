@@ -45,10 +45,10 @@ $result1=$conn->query("select distinct E.Event_ID from Events E inner join Custo
             <a href="#">Events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Customer_Buy_Painting.html">Buy Painting</a>
+            <a class="nav-link" href="Customer_Buy_Painting.php">Buy Painting</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Customer_Sell_Painting.html">Sell Painting</a>
+            <a class="nav-link" href="Customer_Sell_Painting.php">Sell Painting</a>
         </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
