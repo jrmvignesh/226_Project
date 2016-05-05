@@ -15,7 +15,7 @@ $pass="";
 $dbname="mydb";
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
-
+//Update when painting is up for sale.
 if($conn->query("update Paintings set CustomerUsername_Sell='$customer' where Painting_ID='$pid'")===TRUE)
 {
     echo "Up for sale";

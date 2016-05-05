@@ -25,6 +25,7 @@ $nation=$_POST["nationality"];
 $dealer=NULL;
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
+//Encrypting password
 $pass=md5($password);
 
 $sql="insert into Artist VALUES ('$email','$pass','$name','$sex','$age','$style','$nation','$dealer')";
@@ -38,6 +39,9 @@ else
     if($conn->query($sql)===TRUE)
     {
         echo "Inserted successfully";
+        $file=fopen('log','a');
+        $date=date_create();
+        fwrite($file,$sql."\t".date_format($date,'Y-m-d H:i:s')."\n");
         header("Location: http://localhost/226_Project/HTML/Welcome.html");
     }
     else

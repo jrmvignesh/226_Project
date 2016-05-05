@@ -74,6 +74,7 @@ $result1=$conn->query("select distinct E.Event_ID from Events E inner join Custo
         echo "j".$customer;
         if($result1!=NULL && $result1->num_rows>0)
         {
+            //Display all events for which the Customer has been invited
             echo "<br><br>Event Invites<br>";
             echo "<ol>";
             while ($row = $result1->fetch_assoc())

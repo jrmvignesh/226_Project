@@ -65,6 +65,7 @@ $result1=$conn->query("select * from Events");
                     <?php
                     if($result1!=NULL && $result1->num_rows>0)
                     {
+                        //Display all events
                         echo "<br><br>Events<br>";
                         echo "<ol>";
                         while ($row = $result1->fetch_assoc())

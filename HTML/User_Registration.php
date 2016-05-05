@@ -26,6 +26,8 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
 $nation="";
 $sqld="";
 
+
+//Encrypting password
 $pass=md5($password);
 
 $sql="insert into customer values('$email','$name','$age','$sex','$taste','$pass','$dealer')";
@@ -39,6 +41,9 @@ else
     if($conn->query($sql)===TRUE)
     {
         echo "Inserted successfully";
+        $file=fopen('log','a');
+        $date=date_create();
+        fwrite($file,$sql."\t".date_format($date,'Y-m-d H:i:s')."\n");
         header("Location: http://localhost/226_Project/HTML/Welcome.html");
     }
     else

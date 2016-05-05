@@ -29,12 +29,15 @@ $ask_price=$_POST["ask_price"];
 $date=$_POST["date"];
 
 
-
+//Query to add painting
 
 $sql="insert into paintings values(DEFAULT,'$name','$ptype','$ask_price',null,'$artist','$ask_price',null,'$date',null,null,null,null,null,'$n')";
 
 if($conn->query($sql)===TRUE)
 {
+    $file=fopen('log','a');
+    $date=date_create();
+    fwrite($file,$sql."\t".date_format($date,'Y-m-d H:i:s')."\n");
     echo "Up for sale";
 }
 

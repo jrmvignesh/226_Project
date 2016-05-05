@@ -1,0 +1,13 @@
+insert into Employee VALUES (DEFAULT,'uuu','hi','eminem1000@gmail.com')	2016-05-05 20:26:12
+insert into Employee VALUES (DEFAULT,'Heppp','hi','eminem1000@gmail.com')	2016-05-05 20:27:42
+insert into Employee VALUES (DEFAULT,'Mr Wong','hi','eminem1000@gmail.com')	2016-05-05 20:27:52
+insert into Employee VALUES (DEFAULT,'Pqrty','hi','eminem1000@gmail.com')	2016-05-05 20:27:58
+insert into Employee VALUES (DEFAULT,'timely','hi','eminem1000@gmail.com')	2016-05-05 20:28:04
+insert into paintings values(DEFAULT,'Hi','Abstract Art','123',null,'may@may.com','123',null,'1998-12-12',null,null,null,null,null,'may')	2016-05-05 20:29:38
+insert into paintings values(DEFAULT,'qwerty','Abstract Art','4567',null,'may@may.com','4567',null,'2014-03-03',null,null,null,null,null,'may')	2016-05-05 20:30:16
+insert into paintings values(DEFAULT,'monalis','Hyperrealism','300',null,'may@may.com','300',null,'2010-11-12',null,null,null,null,null,'may')	2016-05-05 20:30:35
+insert into paintings values(DEFAULT,'boss','Fauvism','800',null,'may@may.com','800',null,'2012-10-12',null,null,null,null,null,'may')	2016-05-05 20:30:56
+delete from events where Event_ID='1003'	2016-05-05 20:32:45
+delete from events where Event_ID='1235'	2016-05-05 20:32:48
+insert into customer values('yy@yy.com','shibu','24','M','Abstract Art','81dc9bdb52d04dc20036dbd8313ed055','None')	2016-05-05 20:36:16
+insert into Artist VALUES ('qwerty@yahoo.com','d8578edf8458ce06fbc5bb76a58c5ca4','qwerty','M','35','Hyperrealism','Indian','')	2016-05-05 20:36:51

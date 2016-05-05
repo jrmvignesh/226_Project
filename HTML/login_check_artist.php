@@ -20,7 +20,7 @@ $pass="";
 $dbname="mydb";
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
-
+//Procedure to perform authentication
 $procedure="DROP PROCEDURE IF EXISTS sproc_authenticateToken;
 DELIMITER //
 CREATE PROCEDURE sproc_authenticateToken(IN `usr` varchar(50) ,IN `pwd` varchar(32))
@@ -80,18 +80,6 @@ else
         }
     }
 
-    $rt1=$conn->query("CALL sproc_authenticate('$name','$password')");
-
-    /*
-    echo $rt1['num_rows']."ksss";
-
-    if($rt1->num_rows>0)
-    {
-        while ($row = $rt1->fetch_assoc()) {
-            $autumn = $row["auth"];
-            break;
-        }
-    }*/
 
 
 

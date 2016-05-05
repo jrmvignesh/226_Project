@@ -64,6 +64,8 @@ $result1=$conn->query("select * from Events");
 
 
                     <?php
+
+                    //Display all events
                     if($result1!=NULL && $result1->num_rows>0)
                     {
                         echo "<br><br>Events<br>";

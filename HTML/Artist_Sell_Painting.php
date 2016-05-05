@@ -20,9 +20,7 @@ $pass="";
 $dbname="mydb";
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
-
-
-    $result1=$conn->query("select * from paintings where ArtistUsername='$artist'");
+$result1=$conn->query("select * from paintings where ArtistUsername='$artist'");
 
 ?>
 

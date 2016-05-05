@@ -30,6 +30,7 @@ if($conn->connect_error)
 }
 else
 {
+    //Transaction to delete and insert an art dealer
 $transaction="BEGIN;
 delete from `Art Dealer` where Username='$email1';
 insert into `Art Dealer` values ('$username','$password');

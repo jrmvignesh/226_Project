@@ -20,6 +20,7 @@ $date=$_POST["date"];
 $conn=new mysqli($servername,$username,$pass,$dbname);
 $dname=$_SESSION["DealerName"];
 
+//Query to add event
 $sql="insert into Events VALUES (DEFAULT,'$name','$location','$theme','$date','$dname')";
 
 if($conn->connect_error)
