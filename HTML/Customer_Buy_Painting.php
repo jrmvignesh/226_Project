@@ -65,7 +65,9 @@ $result1=$conn->query($sql);
             {
                 $pid=$row["Painting_ID"];
                 $nam=$row["Name"];
-                echo "<li>".$pid."&nbsp;&nbsp;&nbsp;".$nam."&nbsp;&nbsp;&nbsp;<input type=button value=Buy onclick=\"location = 'customer_buy_transaction.php?PID=$pid'\"/> <br>";
+                echo "<li>".$pid."&nbsp;&nbsp;&nbsp;".$nam."&nbsp;&nbsp;&nbsp;<br>";
+
+                /*<input type=button value=Buy onclick=\"location = 'customer_buy_transaction.php?PID=$pid'\"/> */
             }
             echo "</ol>";
         }

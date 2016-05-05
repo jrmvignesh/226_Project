@@ -27,6 +27,8 @@ if($conn->connect_error)
 }
 else
 {
+
+
 if($conn->query($sql)===TRUE)
 {
     echo "Registered for event";
