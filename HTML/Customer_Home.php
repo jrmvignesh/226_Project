@@ -72,14 +72,14 @@ $result1=$conn->query("select distinct E.Event_ID from Events E inner join Custo
         if($result1!=NULL && $result1->num_rows>0)
         {
             //Display all events for which the Customer has been invited
-            echo "<br><br>Event Invites<br>";
-            echo "<ol>";
+
+            echo "<ol><table class='table'><tr><th>Serial No</th><th>Event ID</th><th>Register</th></tr>";
             while ($row = $result1->fetch_assoc())
             {
                 $evid=$row["Event_ID"];
-                echo "<li>".$evid."&nbsp;&nbsp;&nbsp;"."&nbsp;&nbsp;&nbsp;<input type=button value=Register onclick=\"location = 'register_event.php?CUName=$customer&EVID=$evid'\"/> <br>";
+                echo "<tr><td><li></td><td>".$evid."</td>"."<td><input type=button value=Register onclick=\"location = 'register_event.php?CUName=$customer&EVID=$evid'\"/></td></tr>";
             }
-            echo "</ol>";
+            echo "</table></ol>";
         }
         ?>
     </div>

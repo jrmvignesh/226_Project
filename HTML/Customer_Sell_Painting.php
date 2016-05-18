@@ -53,21 +53,21 @@ $conn=new mysqli($servername,$username,$pass,$dbname);
     </nav>
     <div>
         This will describe all the paintings to the customer which he has already bought.
-        It can just have a sell button infront of each painting which he can click and sell it.
+        It can just have a sell button in front of each painting which he can click and sell it.
         There will also be a ask price text area which will update the new ask price. We have to think about the date
         whether needs to change it or not.
 
         <?php
         if($result1!=NULL && $result1->num_rows>0)
         {
-            echo "<br><br>Paintings under ownership<br>";
-            echo "<ol>";
+
+            echo "<ol><table class='table'><tr><th>Serial No</th><th>Painting ID</th><th>Sell</th></tr>";
             while ($row = $result1->fetch_assoc())
             {
                 $evid=$row["Painting_ID"];
-                echo "<li>".$evid."&nbsp;"."&nbsp;&nbsp;&nbsp;<input type=button value=Sell onclick=\"location = 'customer_sells.php?PID=$evid'\"/> <br>";
+                echo "<tr><td><li></td><td>".$evid."</td><td>"."&nbsp;&nbsp;&nbsp;<input type=button value=Sell onclick=\"location = 'customer_sells.php?PID=$evid'\"/></td></tr>";
             }
-            echo "</ol>";
+            echo "</table></ol>";
         }
         ?>
 

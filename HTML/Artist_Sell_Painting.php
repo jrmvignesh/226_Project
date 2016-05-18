@@ -59,17 +59,20 @@ $result1=$conn->query("select * from paintings where ArtistUsername='$artist'");
                 add new paintings
 
                 <?php
+
+
+
                 if($result1!=NULL && $result1->num_rows>0)
                 {
-                    echo "<br><br>Paintings up for sale<br>";
-                    echo "Painting ID&nbsp;Name";
-                    echo "<ol>";
+
+                    echo "<ol><table class='table'><tr><th>Serial No</th><th>Painting ID</th><th>Name</th></tr>";
+                    echo "";
                     while ($row = $result1->fetch_assoc())
                     {
                         $evid=$row["Painting_ID"];
-                        echo "<li>".$evid."&nbsp;".$row["Name"]."<br>";
+                        echo "<tr><td><li></td><td><a href='painting.php?PID=$evid'>$evid</a>"."</td><td>".$row["Name"]."</td></tr>";
                     }
-                    echo "</ol>";
+                    echo "</table></ol>";
                 }
                 ?>
 
@@ -108,10 +111,7 @@ $result1=$conn->query("select * from paintings where ArtistUsername='$artist'");
                             <label for="date">Date:</label>
                             <input  type="date" name="date" class="form-control" required id="date" placeholder="Enter date">
                         </div>
-                        <div class="form-group">
-                            <label for="painting_image">Upload Painting Image</label>
-                            <input name="painting_image" type="file" class="form-control-file" id="painting_image">
-                        </div>
+
                     </div>
                     <button type="submit" class="btn btn-success">Submit</button>
                 </form>

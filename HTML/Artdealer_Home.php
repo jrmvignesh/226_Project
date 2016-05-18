@@ -76,13 +76,13 @@ $result1=$conn->query("select * from Events where DealerName='$dealer'");
                 <?php
                 if($result1->num_rows>0)
                 {
-                    echo "<br><br>Events Being Conducted<br>";
-                    echo "<ol>";
+                    echo "<br><br><br>";
+                    echo "<ol><table class='table'><tr><th>Serial No</th><th>Event</th></tr>";
                     while ($row = $result1->fetch_assoc())
                     {
-                        echo "<li>".$row["Name"]."<br>";
+                        echo "<tr><td><li></td><td>".$row["Name"]."</td></tr>";
                     }
-                    echo "</ol>";
+                    echo "</table></ol>";
                 }
 
                 ?>

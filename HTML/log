@@ -11,3 +11,21 @@ delete from events where Event_ID='1003'	2016-05-05 20:32:45
 delete from events where Event_ID='1235'	2016-05-05 20:32:48
 insert into customer values('yy@yy.com','shibu','24','M','Abstract Art','81dc9bdb52d04dc20036dbd8313ed055','None')	2016-05-05 20:36:16
 insert into Artist VALUES ('qwerty@yahoo.com','d8578edf8458ce06fbc5bb76a58c5ca4','qwerty','M','35','Hyperrealism','Indian','')	2016-05-05 20:36:51
+insert into Artist VALUES ('mysore@mysore.com','155a9b437eb5b59d011b9fea23334503','mysore','M','35','Pop Art','India','')	2016-05-09 08:59:34
+insert into Artist VALUES ('jun@jun.com','6b5843ce9d2d0599c3e3ce6d59c1551f','june','M','26','Abstract Art','India','')	2016-05-10 00:19:42
+insert into paintings values(DEFAULT,'JOB FAIR','Abstract Art','100',null,'jun@jun.com','100',null,'07-05-2016',null,null,null,null,null,'june')	2016-05-10 00:22:12
+insert into paintings values(DEFAULT,'timw','Abstract Art','354',null,'may@may.com','354',null,'2016-11-11',null,null,null,null,null,'may')	2016-05-10 00:57:52
+insert into paintings values(DEFAULT,'er','Abstract Art','345',null,'may@may.com','345',null,'1996-11-11',null,null,null,null,null,'may')	2016-05-10 10:25:08
+delete from events where Event_ID='1007'	2016-05-10 11:27:46
+insert into customer values('ram@gmail.com','ram','25','M','Abstract Art','4641999a7679fcaef2df0e26d11e3c72','None')	2016-05-10 21:16:13
+insert into Artist VALUES ('shyam@gmail.com','5a4cd850fc787d454416aa3a47580468','shyam','M','29','Abstract Art','Indian','')	2016-05-10 21:18:34
+insert into paintings values(DEFAULT,'Monalisa','Abstract Art','200',null,'shyam@gmail.com','200',null,'2016-05-09',null,null,null,null,null,'shyam')	2016-05-10 21:20:52
+delete from events where Event_ID='1006'	2016-05-10 21:40:45
+delete from events where Event_ID='1'	2016-05-10 21:45:31
+insert into Artist VALUES ('naga@yahoo.com','def4021bc0cb91cd0bfe422d8044bc0b','naga','M','33','Abstract Art','Indian','')	2016-05-10 21:47:35
+insert into Artist VALUES ('jrmvignesh@gmail.com','068e4c26ca80acc0dcf01f3349206f8f','Vignesh','M','26','Abstract Art','India','')	2016-05-10 21:58:27
+insert into paintings values(DEFAULT,'Testing','Abstract Art','20',null,'jrmvignesh@gmail.com','20',null,'2016-05-10',null,null,null,null,null,'Vignesh')	2016-05-10 21:59:57
+insert into Artist VALUES ('ankit@gmail.com','447d2c8dc25efbc493788a322f1a00e7','Ankit','M','25','Abstract Art','India','')	2016-05-10 23:26:42
+insert into customer values('harshit@gmail.com','harshit','25','m','Abstract Art','83a75f0b31435193bafd3b9c5fd45aec','None')	2016-05-10 23:28:19
+insert into Employee VALUES (DEFAULT,'rocky','admin','eminem1000@gmail.com')	2016-05-10 23:31:27
+insert into paintings values(DEFAULT,'mona','Abstract Art','300',null,'ankit@gmail.com','300',null,'2016-05-11',null,null,null,null,null,'Ankit')	2016-05-10 23:37:41

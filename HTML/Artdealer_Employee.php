@@ -50,8 +50,8 @@ $dname=$_SESSION["DealerName"];
                 <div>
                     <h2 class="text-center">Employees</h2>
                 </div>
-                This section will display all the employess art dealer has added
-                and on the other section he can add new employees. We can give a button to remove a employee
+                This section will display all the employess the art dealer has added
+                and on the other section he can add new employees.
 
 
                 <?php
@@ -64,13 +64,13 @@ $dname=$_SESSION["DealerName"];
                 $result1=$conn->query("select * from Employee where DealerName='$dname'");
                 if($result1->num_rows>0)
                 {
-                    echo "<br><br>Employees Under Control<br>";
-                    echo "<ol>";
+
+                    echo "<ol><table class='table'><tr><th>Serial No</th><th>Name</th></tr>";
                     while ($row = $result1->fetch_assoc())
                     {
-                        echo "<li>".$row["Name"]."<br>";
+                        echo "<tr><td><li></td><td>".$row["Name"]."</td></tr>";
                     }
-                    echo "</ol>";
+                    echo "</table></ol>";
                 }
 
                 ?>

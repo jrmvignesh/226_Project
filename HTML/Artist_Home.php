@@ -71,14 +71,19 @@ if($dealer!=NULL)
     <?php
     if($result1!=NULL && $result1->num_rows>0)
     {
-        echo "<br><br>Event Invites<br>";
-        echo "<ol>";
+
+        echo "<ol><table class= table><thead><tr><th>Serial No</th><th>Event ID</th><th>Register</th></thead></tr>";
         while ($row = $result1->fetch_assoc())
         {
             $evid=$row["Event_ID"];
-            echo "<li>".$evid."&nbsp;"."&nbsp;&nbsp;&nbsp;<input type=button value=Register onclick=\"location = 'register_event_artist.php?AName=$artist&EVID=$evid'\"/> <br>";
+            echo "<tr><td><li></td><td>
+
+
+".$evid.""."</td><td>
+
+<input type=button value=Register  class = btn btn-success  onclick=\"location = 'register_event_artist.php?AName=$artist&EVID=$evid'\"/></td></tr>";
         }
-        echo "</ol>";
+        echo "</table></ol>";
     }
     ?>
 

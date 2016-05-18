@@ -12,7 +12,7 @@
 
 <?php
 session_start();
-$dealer=$_SESSION["DealerName"];
+
 
 
 $servername="localhost";
@@ -21,7 +21,7 @@ $pass="";
 $dbname="mydb";
 $conn=new mysqli($servername,$username,$pass,$dbname);
 
-$result1=$conn->query("select * from Events where DealerName='$dealer'");
+$query="select * from `art dealer`";
 
 ?>
 
@@ -95,6 +95,20 @@ $result1=$conn->query("select * from Events where DealerName='$dealer'");
 
         <div>
             <h2 class="text-center"> Art Dealer Username </h2>
+
+            <?php
+            $result1=$conn->query($query);
+            if($result1->num_rows>0)
+            {
+
+                echo "<ol><table class='table'><tr><th>Art Dealer</th></tr>";
+                while ($row = $result1->fetch_assoc())
+                {
+                    echo "<tr><td>".$row["Username"]."</td></tr>";
+                }
+                echo "</table></ol>";
+            }
+?>
         </div>
 </div>
 </body>

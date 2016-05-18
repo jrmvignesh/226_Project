@@ -41,7 +41,7 @@ $result1=$conn->query($sql);
             </div>
             <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a href="Artdealer_Home.html">Events</a>
+                    <a href="Artdealer_Home.php">Events</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="Artdealer_Painting.php">Update Painting</a>
@@ -75,16 +75,16 @@ $result1=$conn->query($sql);
                 <?php
                 if($result1!=NULL && $result1->num_rows>0)
                 {
-                    echo "<br><br>Paintings up for sale<br>";
-                    echo "Painting ID&nbsp;Name";
-                    echo "<ol>";
+
+
+                    echo "<ol><table class='table'><th>Serial No</th><th>Painting ID</th><th>Name</th>";
 
                     while ($row = $result1->fetch_assoc())
                     {
                         $evid=$row["Painting_ID"];
-                        echo "<li>".$evid."&nbsp;".$row["Name"]."<br>";
+                        echo "<tr><td><li></td><td>".$evid."</td>&nbsp;<td>".$row["Name"]."</td></tr>";
                     }
-                    echo "</ol>";
+                    echo "</table></ol>";
                 }
                 ?>
 

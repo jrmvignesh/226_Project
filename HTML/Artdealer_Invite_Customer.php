@@ -64,17 +64,19 @@ $result=$conn->query($sql);
         </div>
     </nav>
     <div>
-        This will describe all the customer whom can be invited to the event. We can give a invite button and event id dropdown<br><br>
+        This will describe all the customer whom can be invited to the event.<br><br>
         <?php
 if($result->num_rows>0)
 {
+    echo "<ol><table class='table'><tr><th>Customer Username</th><th>Invite</th></tr>";
     while($row=$result->fetch_assoc())
     {
         $_SESSION["Visit"]="Customer";
         $cus=$row["Username"];
 
-        echo $cus."  "."  &nbsp;&nbsp;<input type=button value=Invite onclick=\"location='invite_customer.php?CUName=$cus'\"/><br>";
+        echo "<tr><td>".$cus."</td>  "."<td><input type=button value=Invite onclick=\"location='invite_customer.php?CUName=$cus'\"/></td></tr>";
     }
+    echo "</table></ol>";
 }
         ?>
 

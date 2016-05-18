@@ -41,6 +41,16 @@ if($conn->query($sql)===TRUE)
     echo "Up for sale";
 }
 
+/*
+$m=new MongoClient();
+$db=$m->selectDB("art_gallery");
+$c=$db->selectCollection("Artist");
+$document = array(
+    "Name" => "Vignesh"
+);
+
+$c->insert($document);*/
+
 header("Location: http://localhost/226_Project/HTML/Artist_Sell_Painting.php");
 
 

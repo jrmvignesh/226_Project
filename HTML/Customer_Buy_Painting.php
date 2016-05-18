@@ -59,17 +59,17 @@ $result1=$conn->query($sql);
 
         if($result1!=NULL && $result1->num_rows>0)
         {
-            echo "<br><br>Paintings available to purchase<br>";
-            echo "<ol>";
+
+            echo "<ol><table class='table'><tr><th>Serial No</th><th>Painting ID</th><th>Painting Name</th></tr>";
             while ($row = $result1->fetch_assoc())
             {
                 $pid=$row["Painting_ID"];
                 $nam=$row["Name"];
-                echo "<li>".$pid."&nbsp;&nbsp;&nbsp;".$nam."&nbsp;&nbsp;&nbsp;<br>";
+                echo "<tr><td><li></td><td>".$pid."</td><td>".$nam."</td></tr>";
 
                 /*<input type=button value=Buy onclick=\"location = 'customer_buy_transaction.php?PID=$pid'\"/> */
             }
-            echo "</ol>";
+            echo "</table></ol>";
         }
         ?>
 
